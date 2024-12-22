@@ -99,7 +99,7 @@ if __name__ == "__main__":
     lm = pipeline(
         "text-generation,
         model="meta-llama/Meta-Llama-3.1-8B-Instruct",
-        model_kwargs = {load_in_bit = True},
+        model_kwargs = {load_in_4bit = True},
         device_map = "auto",
         use_auth_token = True
           )
