@@ -2,13 +2,13 @@ import argparse
 import os
 
 import pandas as pd
-from lotus.models import E5Model
+from lotus.models import FaissRM
 
 from tag.utils import row_to_str
 
 
 def embed_df(args):
-    e5_model = E5Model()
+    e5_model = FaissRM()
     df_path = os.path.join("../pandas_dfs", args.db_name, f"{args.table_name}.csv")
     df = pd.read_csv(df_path)
     serialized_rows = []
